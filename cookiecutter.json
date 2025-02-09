@@ -1,6 +1,11 @@
 {
-    "project_name": "project_name",
-    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_name": "My Awesome Project",
+    "repo_name": "{{ cookiecutter.project_name.title().replace(' ', '') }}",
     "package_name": "src",
-    "description": "A truly neutral research cookie cutter"
+    "author": "Your Name (used for the license)",
+    "year": "2025 (used for the license)",
+    "email": "your.email@example.com",
+    "description": "A short project description",
+    "python_version": "3.10",
+    "license": "MIT"
 }

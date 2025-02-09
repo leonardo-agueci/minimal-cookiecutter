@@ -1,3 +1,5 @@
+import time
+
 help = """
 Your project has been created!
 _____________________________________________________________________________
@@ -22,8 +24,21 @@ _____________________________________________________________________________
     :::::::  '''''''''''   ''''''''''''':::. -'\  \       C. SWANSIGER
 _____':::::_____________________________________\__\_________________________
 
-If you have not done so already, create a conda environment for your new 
-project with:
+"""
+instructions = """
+If you have not done so already, create a python virtual environment for your new 
+project:
+
+- Using uv (recommended)
+# Run if you don't have uv installed
+pip install uv
+# Create the environment (no ne)
+cd {{cookiecutter.repo_name}}
+uv venv create --python 3.10
+# Install dependencies
+uv install
+
+- Using conda
 
 cd {{cookiecutter.repo_name}}
 conda create --name {{cookiecutter.repo_name}} python=3.11
@@ -34,9 +49,13 @@ Install your new project in your local conda environment with:
 
 pip install -e .
 
-You will need to manually add data to .gitignore to prevent it from syncing to
-version control.
+IMPORTANT: You will need to manually add the environment folder (.venv if you 
+used the default in uv) to .gitignore to prevent it from syncing to version 
+control.
 
 Don't forget to sync to GitHub. Have fun!
 """
 print(help)
+time.sleep(3)
+print(instructions)
+
