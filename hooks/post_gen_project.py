@@ -34,7 +34,7 @@ project:
 pip install uv
 # Create the environment (no ne)
 cd {{cookiecutter.repo_name}}
-uv venv create --python 3.10
+uv venv --python 3.10
 # Install dependencies
 uv install
 
