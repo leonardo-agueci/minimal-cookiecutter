@@ -30,8 +30,15 @@ If you have not done so already, create a python virtual environment for your ne
 project:
 
 - Using uv (recommended)
+# Run if you don't have pipx (for installing uv globally)
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+# (Debian/Ubuntu) you can also use:
+# sudo apt install pipx
+# pipx ensurepath
+
 # Run if you don't have uv installed
-pip install uv
+pipx install uv
 # Create the environment (no ne)
 cd {{cookiecutter.repo_name}}
 uv venv --python 3.10
